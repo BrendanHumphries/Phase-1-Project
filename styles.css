@@ -1,0 +1,30 @@
+#artist-list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 150px;
+}
+
+h3 {
+    margin: auto;   
+    text-align: center;
+    align-content: center;
+}
+
+#info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#thumb {
+    max-height: 400px;
+}
+
+#info-div {
+    align-content: center;
+}
+
+#info-list {
+    align-content: center;
+    margin: auto;
+}
