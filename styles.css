@@ -31,7 +31,16 @@ h3 {
     flex-direction: column;
     height: 400px;
     justify-content: space-around;
+    align-content: center;
     list-style-type: none;
+    border: solid;
+    border-color: #0f69b3;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    text-align: center;
+    width: 200px;
+    height: 350px;
 }
 
 li {
@@ -56,7 +65,7 @@ li {
 
 #comment-area {
     display: flex;
-    margin-top: 100px;
+    margin-top: 50px;
     flex-direction: column;
     align-items: center;
 }
@@ -64,6 +73,7 @@ li {
 label {
     display: flex;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 #comment-box {
@@ -75,4 +85,27 @@ label {
 
 #submit {
     display: flex;
+}
+
+#comment-list {
+    border: solid;
+    border-color: #0f69b3;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    text-align: left;
+    width: 750px;
+    height: 100px;
+}
+
+.comment {
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.comment-name {
+    display: flex;
+    margin-bottom: 1px;
 }

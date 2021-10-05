@@ -41,12 +41,16 @@
             <p id='description-content'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div id ="comment-area">
+            <h1>Comments</h1>
             <ul id ="comment-list">
-                <li>
-                    Example comment
+                <li class="comment">
+                    <p class='comment-name'>Name</p>
+                    <p class='comment-content'>Comment</p>
                 </li>
             </ul>
             <form>
+                <label for='name-input'>Your name:</label>
+                <input type="text" id='name-box' name='name-box'><br>
                 <label for='comment-box'>Leave a comment:</label>
                 <input type='text' id='comment-box' name='comment-box'><br>
                 <input type="submit" id='submit' value='Submit'>
