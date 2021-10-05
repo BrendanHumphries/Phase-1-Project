@@ -10,32 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(resp => resp.json())
     .then(json => {
         const artistNameItem = document.querySelector('#artist-list').children[0];
-        artistNameItem.addEventListener('click', () => {
-            console.log(`I've been clicked! (#1)`);
-            renderBand(json);
-        })
-    })
-    .catch(error => console.error(`Error: ${error}`));
+        artistNameItem.addEventListener('click', () => renderBand(json))
+    }).catch(error => console.error(`Error: ${error}`));
     fetch('https://www.theaudiodb.com/api/v1/json/1/search.php?s=odesza') // Replace 'odesza' with a featured band name
     .then(resp => resp.json())
     .then(json => {
         const artistNameItem = document.querySelector('#artist-list').children[1];
-        artistNameItem.addEventListener('click', () => {
-            console.log(`I've been clicked! (#2)`);
-            renderBand(json);
-        })
-    })
-    .catch(error => console.error(`Error: ${error}`));
+        artistNameItem.addEventListener('click', () => renderBand(json))
+    }).catch(error => console.error(`Error: ${error}`));
     fetch('https://www.theaudiodb.com/api/v1/json/1/search.php?s=daft_punk') // Replace 'daft_punk' with a featured band name
     .then(resp => resp.json())
     .then(json => {
         const artistNameItem = document.querySelector('#artist-list').children[2];
-        artistNameItem.addEventListener('click', () => {
-            console.log(`I've been clicked! (#3)`);
-            renderBand(json);
-        })
-    })
-    .catch(error => console.error(`Error: ${error}`));
+        artistNameItem.addEventListener('click', () => renderBand(json))
+    }).catch(error => console.error(`Error: ${error}`));
 })
 
 function renderBand(json) {
@@ -45,12 +33,12 @@ function renderBand(json) {
     const bandBanner = bandObject.strArtistBanner;
     
     // Right pannel information
-    const bandName = bandObject.strArtist;
-    const bandYear = bandObject.intFormedYear;
-    const bandStyleAndGenre = `${bandObject.strStyle} and ${bandObject.strGenre}`;
-    const bandMembers = bandObject.intMembers;
-    const bandOrigin = bandObject.strCountry;
-
+    const bandName = `Name: ${bandObject.strArtist}`;
+    const bandYear = `Formed: ${bandObject.intFormedYear}`;
+    const bandStyleAndGenre = `Genre: ${bandObject.strStyle} and ${bandObject.strGenre}`;
+    const bandCountry = `Origin: ${bandObject.strCountry}`;
+    const bandMembers = `Number of Members: ${bandObject.intMembers}`;
+    
     // Left pannel information
     const bandThumbnail = bandObject.strArtistThumb;
     const bandWebsite = bandObject.strWebsite;
@@ -62,7 +50,34 @@ function renderBand(json) {
 
     // Select data containers
     const upperPannelContainer = document.querySelector('#ID-TBD') // Need div id
-    const rightPannelContainer = document.querySelector('#info-div');
+    const rightPannelContainer = document.querySelector('#info-list');
     const leftPannelContainer = document.querySelector('#image-div');
-    const lowerPannelContainer = document.querySelector('#ID-TBD'); // Need div id
+    const lowerPannelContainer = document.querySelector('#description');
+
+    // Render right pannel
+    const nameLi = rightPannelContainer.children[0];
+    nameLi.textContent = bandName;
+    const yearLi = rightPannelContainer.children[1];
+    yearLi.textContent = bandYear;
+    const genreLi = rightPannelContainer.children[2];
+    genreLi.textContent = bandStyleAndGenre;
+    const countryLi = rightPannelContainer.children[3];
+    countryLi.textContent = bandCountry;
+    const membersLi = rightPannelContainer.children[4];
+    membersLi.textContent = bandMembers;
+
+    // Render left pannel
+    const thumbnailImg = leftPannelContainer.querySelector('#thumb');
+    thumbnailImg.src = bandThumbnail;
+    thumbnailImg.alt = `${bandName} image`;
+    const websiteLink = leftPannelContainer.querySelector('#website');
+    websiteLink.href = `https://${bandWebsite}`;
+    const facebookLink = leftPannelContainer.querySelector('#facebook');
+    facebookLink.href = `https://${bandFacebook}`;
+    const twitterLink = leftPannelContainer.querySelector('#twitter');
+    twitterLink.href = `https://${bandTwitter}`;
+
+    // Render lower pannel
+    const descriptionP = lowerPannelContainer.querySelector('#description-content');
+    descriptionP.innerText = bandDescription;
 }
