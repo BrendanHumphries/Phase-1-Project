@@ -38,7 +38,7 @@ h3 {
     padding: 10px;
     margin: 10px;
     float: left;
-    text-align: left;
+    text-align: center;
     width: 200px;
     height: 350px;
 }
@@ -88,6 +88,15 @@ label {
 }
 
 #comment-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment {
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    flex-direction: column;
     border: solid;
     border-color: #0f69b3;
     padding: 10px;
@@ -96,13 +105,6 @@ label {
     text-align: left;
     width: 750px;
     height: 100px;
-}
-
-.comment {
-    display: flex;
-    text-align: left;
-    flex-wrap: wrap;
-    flex-direction: column;
 }
 
 .comment-name {
