@@ -1,7 +1,7 @@
 #artist-list {
     display: flex;
     flex-direction: row;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 h3 {
@@ -38,7 +38,7 @@ h3 {
     padding: 10px;
     margin: 10px;
     float: left;
-    text-align: center;
+    text-align: left;
     width: 200px;
     height: 350px;
 }
@@ -110,4 +110,10 @@ label {
 .comment-name {
     display: flex;
     margin-bottom: 1px;
+}
+
+#banner {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
 }
