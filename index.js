@@ -49,11 +49,15 @@ function renderBand(json) {
     const bandDescription = bandObject.strBiographyEN;
 
     // Select data containers
-    const upperPannelContainer = document.querySelector('#ID-TBD') // Need div id
+    const upperPannelContainer = document.querySelector('#banner');
     const rightPannelContainer = document.querySelector('#info-list');
     const leftPannelContainer = document.querySelector('#image-div');
     const lowerPannelContainer = document.querySelector('#description');
 
+    // Render upper pannel
+    const bannerimg = upperPannelContainer.querySelector('img');
+    bannerimg.src = bandBanner;
+    
     // Render right pannel
     const nameLi = rightPannelContainer.children[0];
     nameLi.textContent = bandName;
