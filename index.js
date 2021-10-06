@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Fetch and automatically render first band in display section of page
-    fetch('https://www.theaudiodb.com/api/v1/json/1/search.php?s=lianne_la_havas') // Replace 'coldplay' with a featured band name
+    fetch('https://www.theaudiodb.com/api/v1/json/1/search.php?s=james_blake')
     .then(resp => resp.json())
     .then(json => renderBand(json))
     .catch(error => console.error(`Error: ${error}`));
 
     // Fetch data for each of the three featured artists and then render them when clicked
-    fetch('https://www.theaudiodb.com/api/v1/json/1/search.php?s=lianne_la_havas') // Replace 'coldplay' with a featured band name
+    fetch('https://www.theaudiodb.com/api/v1/json/1/search.php?s=james_blake')
     .then(resp => resp.json())
     .then(json => {
         const artistNameItem = document.querySelector('#artist-list').children[0];
@@ -38,7 +38,7 @@ function renderBand(json) {
     // Right pannel information
     const bandName = `Name: ${bandObject.strArtist}`;
     const bandYear = `Formed: ${bandObject.intFormedYear}`;
-    const bandStyleAndGenre = `Genre: ${bandObject.strStyle}`;
+    const bandStyleAndGenre = `Genre: ${bandObject.strGenre}`;
     const bandCountry = `Origin: ${bandObject.strCountry}`;
     const bandMembers = `Number of Members: ${bandObject.intMembers}`;
     
