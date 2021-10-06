@@ -8,10 +8,15 @@ body {
     margin-bottom: 50px;
 }
 
-h1 {
+#page-header {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
     margin-left: 100px;
+}
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
 }
 
 h3 {
