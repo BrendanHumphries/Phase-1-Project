@@ -10,6 +10,12 @@ h3 {
     align-content: center;
 }
 
+h3:hover {
+    color: white;
+    background-color: #0f69b3;
+    cursor: pointer;
+}
+
 #info {
     display: flex;
     flex-direction: row;
