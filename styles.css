@@ -1,5 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(32, 72, 117, 0.795);
 }
 
 #artist-list {
@@ -23,6 +24,8 @@ h3 {
     margin: auto;   
     text-align: center;
     align-content: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
 }
 
 h3:hover {
@@ -42,6 +45,12 @@ h3:hover {
     max-height: 450px;
 }
 
+a {
+    color: rgb(24, 24, 24);
+    font-weight: bold;
+    font-style: oblique;
+}
+
 #info-div {
     display: flex;
     align-items: center;
@@ -54,17 +63,16 @@ h3:hover {
     align-content: center;
     list-style-type: none;
     border: solid;
-    border-color: #0f69b3;
-    background-color: #0f69b3;
-    border-width: 2px;
+    border-color: black;
+    background-color: #0f69b39f;
+    border-width: 1px;
     border-radius: 10px 50px;
-    padding-left: 30px;
-    margin: 10px;
-    float: left;
+    padding-left: 65px;
     text-align: left;
-    width: 300px;
+    width: 250px;
     height: 400px;
     color: lightgray;
+    font-weight:600;
 }
 
 #links {
@@ -76,6 +84,7 @@ h3:hover {
     border-width: 1px;
     padding-top: 5px;
     padding-bottom: 5px;
+    background-color: rgb(224, 224, 224);
 }
 
 #description {
@@ -87,6 +96,8 @@ h3:hover {
 #description-content {
     display: flex;
     width: 1000px;
+    color: rgb(24, 24, 24);
+    font-weight: bold;
 }
 
 #comment-area {
@@ -97,16 +108,22 @@ h3:hover {
 }
 
 .comment-content {
+    color: black;
     border: solid;
-    border-radius: 10px;
-    border-width: 1px;
-    padding: 5px;
+    border-radius: 0px 10px 10px;
+    border-width: 0px;
+    background-color: rgb(224, 224, 224);
+    padding: 10px;
+    padding-left: 15px;
+    margin-left: 50px;
+    margin-right: 10px;
 }
 
 label {
     display: flex;
     margin-top: 20px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 #name-box {
@@ -114,6 +131,7 @@ label {
     border-radius: 5px;
     height: 20px;
     border-width: 1px;
+    background-color:rgb(224, 224, 224);
 }
 
 #comment-box {
@@ -122,6 +140,7 @@ label {
     width: 650px;
     border-radius: 10px;
     padding: 10px;
+    background-color:rgb(224, 224, 224);
 }
 
 #submit {
@@ -129,6 +148,13 @@ label {
     margin-bottom: 50px;
     padding: 10px 20px;
     float: right;
+    border-radius: 20px;
+}
+
+#submit:hover {
+    background-color: lightslategray;
+    cursor: pointer;
+    color: rgb(224, 224, 224);
 }
 
 #comment-list {
@@ -141,13 +167,14 @@ label {
     text-align: left;
     flex-wrap: wrap;
     flex-direction: column;
+    color: lightgray;
+    background-color: #0f69b39f;
     border: solid;
     border-color: #0f69b3;
     border-radius: 10px;
     border-width: 1px;
     padding: 10px;
-    margin: 10px;
-    float: left;
+    padding-left: 15px;
     text-align: left;
     width: 750px;
     height: auto;
