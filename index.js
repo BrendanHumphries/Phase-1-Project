@@ -105,7 +105,7 @@ function renderComment() {
         commentName.className = 'comment-name';
         const commentContent = document.createElement('p');
         commentContent.className = 'comment-content';
-        commentName.textContent = inputName;
+        commentName.textContent = `Name: ${inputName}`;
         commentContent.textContent = inputComment;
         newCommentBox.append(commentName, commentContent);
         commentContainer.append(newCommentBox);
