@@ -85,6 +85,13 @@ h3:hover {
     align-items: center;
 }
 
+.comment-content {
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 5px;
+}
+
 label {
     display: flex;
     margin-top: 20px;
