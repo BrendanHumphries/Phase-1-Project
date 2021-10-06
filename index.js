@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const artistNameItem = document.querySelector('#artist-list').children[2];
         artistNameItem.addEventListener('click', () => renderBand(json))
     }).catch(error => console.error(`Error: ${error}`));
+
+    // Add an event listener to the submit button and add the comment to the comment list
+    renderComment();
 })
 
 function renderBand(json) {
@@ -84,4 +87,29 @@ function renderBand(json) {
     // Render lower pannel
     const descriptionP = lowerPannelContainer.querySelector('#description-content');
     descriptionP.innerText = bandDescription;
+
+    // Clear comments list
+    document.querySelector('#comment-list').innerHTML = '';
+}
+
+function renderComment() {
+    const commentForm = document.querySelector('form');
+    commentForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const commentContainer = document.querySelector('#comment-list')
+        const inputName = commentForm.querySelector('#name-box').value;
+        const inputComment = commentForm.querySelector('#comment-box').value;
+        const newCommentBox = document.createElement('li');
+        newCommentBox.className = 'comment';
+        const commentName = document.createElement('p');
+        commentName.className = 'comment-name';
+        const commentContent = document.createElement('p');
+        commentContent.className = 'comment-content';
+        commentName.textContent = inputName;
+        commentContent.textContent = inputComment;
+        newCommentBox.append(commentName, commentContent);
+        commentContainer.append(newCommentBox);
+        commentForm.reset();
+
+    })
 }
