@@ -1,24 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Fetch and automatically render first band in display section of page
-    fetch('https://www.theaudiodb.com/api/v1/json/1/search.php?s=james_blake')
+    fetch('https://www.theaudiodb.com/api/v1/json/2/search.php?s=james_blake')
     .then(resp => resp.json())
     .then(json => renderBand(json))
     .catch(error => console.error(`Error: ${error}`));
 
     // Fetch data for each of the three featured artists and then render them when clicked
-    fetch('https://www.theaudiodb.com/api/v1/json/1/search.php?s=james_blake')
+    fetch('https://www.theaudiodb.com/api/v1/json/2/search.php?s=james_blake')
     .then(resp => resp.json())
     .then(json => {
         const artistNameItem = document.querySelector('#artist-list').children[0];
         artistNameItem.addEventListener('click', () => renderBand(json))
     }).catch(error => console.error(`Error: ${error}`));
-    fetch('https://www.theaudiodb.com/api/v1/json/1/search.php?s=odesza')
+    fetch('https://www.theaudiodb.com/api/v1/json/2/search.php?s=odesza')
     .then(resp => resp.json())
     .then(json => {
         const artistNameItem = document.querySelector('#artist-list').children[1];
         artistNameItem.addEventListener('click', () => renderBand(json))
     }).catch(error => console.error(`Error: ${error}`));
-    fetch('https://www.theaudiodb.com/api/v1/json/1/search.php?s=daft_punk')
+    fetch('https://www.theaudiodb.com/api/v1/json/2/search.php?s=daft_punk')
     .then(resp => resp.json())
     .then(json => {
         const artistNameItem = document.querySelector('#artist-list').children[2];
